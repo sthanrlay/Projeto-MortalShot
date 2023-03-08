@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Recrutar</title>
+</head>
+<body>
+         
+    <div class="wrapper"> 
+        <div class="textfield">
+             <div class="input placeholder"></div>
+              <div class="input text" contenteditable="true" spellcheck="false"></div> 
+            </div>
+               <div class="bottom"> <span class="counter">Qual seu objetivo na MS?</span> 
+                <button class="btn"><a href="https://chat.whatsapp.com/BAWAydrJBJ941PZTzfryaj">Recrutar</a></button> 
+        </div> 
+    </div> 
+        <script type="text/javascript">
+            const pHolder = document.querySelector('.placeholder');
+const inputText = document.querySelector('.text'); 
+const counter = document.querySelector('.counter'); 
+const btn = document.querySelector('.btn'); 
+inputText.onkeyup = (e)=>{ let element = e.target; 
+    let maxLength = 100; 
+    let currentLength = element.innerText.length; 
+    if(currentLength <= 0){ 
+        pHolder.style.display = "block"; 
+        btn.style.opacity = "0.4"; 
+        btn.style.cursor = "default"; 
+    } 
+    
+    else{ 
+        pHolder.style.display = "none"; 
+        btn.style.opacity = "1"; 
+        btn.style.cursor = "pointer"; 
+    } 
+    counter.innerText = maxLength - currentLength; 
+    if(currentLength > maxLength){ 
+        btn.style.opacity = "0.4"; 
+        btn.style.cursor = "default" 
+    } 
+}
+        </script>
+</body>
+</html>
